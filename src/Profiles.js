@@ -1,6 +1,7 @@
 import React from "react";
 import Profile from "./Profile";
 import { Link, Route, Router } from "react-router-dom";
+import WithRouterSample from "./WithRouterSample";
 
 function Profiles() {
   return (
@@ -26,6 +27,7 @@ function Profiles() {
         exact
         component={Profile}
       ></Route>
+      <WithRouterSample></WithRouterSample>
     </div>
   );
 }

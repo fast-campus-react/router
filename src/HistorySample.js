@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 
+
 function HistorySample({ history }) {
   const goBack = () => {
     history.goBack();
