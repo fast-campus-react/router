@@ -1,6 +1,6 @@
 import React from "react";
 import Profile from "./Profile";
-import { Link, Route, Router } from "react-router-dom";
+import { Link, Route, Router, NavLink } from "react-router-dom";
 import WithRouterSample from "./WithRouterSample";
 
 function Profiles() {
@@ -10,10 +10,22 @@ function Profiles() {
 
       <ul>
         <li>
-          <Link to="/profiles/velopert">Velopert</Link>
+          <NavLink
+            to="/profiles/velopert"
+            activeStyle={{ background: "black", color: "white" }}
+            activeClassName="ative"
+            
+          >
+            Velopert
+          </NavLink>
         </li>
         <li>
-          <Link to="/profiles/homer">homer</Link>
+          <NavLink
+            to="/profiles/homer"
+            activeStyle={{ background: "black", color: "white" }}
+          >
+            homer
+          </NavLink>
         </li>
       </ul>
 
@@ -22,11 +34,7 @@ function Profiles() {
         exact
         render={() => <div>사용자를 선택해주세요</div>}
       ></Route>
-        <Route
-        path="/profiles/:username"
-        exact
-        component={Profile}
-      ></Route>
+      <Route path="/profiles/:username" exact component={Profile}></Route>
       <WithRouterSample></WithRouterSample>
     </div>
   );
